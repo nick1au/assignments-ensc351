@@ -1,0 +1,27 @@
+http://www.cs.sfu.ca/CourseCentral/225/tjd/runningCppWithMake.html
+
+Running C++ Programs at the Command Line
+First, make sure you have g++ (the compiler), make (the build tool), and valgrind (the memory leak checker) installed using this command:
+$ sudo apt-get install g++ make valgrind
+You don’t need to run this on the lab computers: those programs should already be installed on the lab computers.
+Second, save a copy of the files makefile (make sure to save this with the name makefile) and cmpt_error.h in the folder on your computer where you will be writing your program.
+Third, using your favourite text editor (see below for some suggestions), save the following in a file named hello.cpp:
+// hello.cpp
+#include "cmpt_error.h"
+#include <iostream>
+
+int main() {
+   std::cout << "Hello, CMPT 135!\n";
+} // main
+We will compile (or build) our programs using make, a standard Linux build tool. To compile your program ($ is the command-line prompt) type this:
+$ make hello
+g++  -std=c++14 -Wall -Wextra -Werror -Wfatal-errors -Wno-sign-compare -Wnon-virtual-dtor -g   hello.cpp   -o hello
+Notice that this calls g++ with many options. These options come from makefile, so make sure it’s in the same folder as hello.cpp.
+Assuming there are no errors, run the resulting program like this:
+$ ./hello
+Notice you must type ./ first.
+To run a program with valgrind, type this:
+$ valgrind ./hello
+You will see a big log message when the program ends; it will usually tell you if there are any memory errors.
+If you want to time how long it takes a program to run, you can use the time command like this:
+$ time ./hello
