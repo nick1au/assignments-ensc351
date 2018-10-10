@@ -7,7 +7,9 @@
 #include <thread>
 #include <stdlib.h>
 
-const int num = 10;
+#include <iomanip>
+
+const int num = 1000;
 pthread_t total_thread[num];
 pthread_t pthread_self(void);
 bool all_threads_created = false;
@@ -41,25 +43,6 @@ using namespace std;
 using namespace std::chrono;
 
 
-/*class Ticket_Lock{
-public:
-	Ticket_Lock()
-		{lock_number = 0;}
-	Ticket_Lock(int num)
-		{lock_number = num;}
-	int getnumber()
-		{return lock_number;}
-	void set_number(int num)
-		{lock_number = num;}
-	bool same_number(int num)
-		{return(lock_number == num);} 
-
-private:
-	int lock_number;
-};*/
-
-//Ticket_Lock* thread_lock = new Ticket_Lock;
-//thread_lock.set_number(main_thread);
 
 int main(){
 	//time_point<system_clock> start,end;
@@ -88,9 +71,9 @@ int main(){
 void create_threads()
 {
 	for (int i = 0; i < num; i++){
-		int* ix = &i;
         pthread_create(&(total_thread[i]), NULL, start_func, &i);//(void*) &i/*NULL*/);
         //global_int_for_method_2++;
+
     }
     all_threads_created = true;	
 }
@@ -104,31 +87,34 @@ void *start_func(void* ptr)
 	//pthread_t thId = pthread_self();
 	//threadid[setlock_counter] = thId;
 	//setlock_counter++;
-
+	//printf("IX_THREAD %d '\n' ", *(int*)ptr);
 	
 	//pthread_t thId = pthread_self();
 	//Ticket_Lock ticket;
 	//ticket.set_number(thId);
+	int ix = *(int*) ptr;
 	
-	//cout << "CELL_ARR  " << *((int *)ptr)<< endl;
+	//cout << "CELL_ARR  " << ix << endl; //*((int *)ptr)<< endl;
 
 	while(!all_threads_created)
 	{}	
 
 	time_point<system_clock> start,end;
 	start = system_clock::now();
-	//pthread_mutex_lock(&method1_lock);
-	//method1();
-	//pthread_mutex_unlock(&method1_lock);
+	pthread_mutex_lock(&method1_lock);
+	method1();
+	door();
+	pthread_mutex_unlock(&method1_lock);
 	end = system_clock::now();
-	duration<double> elapsed_seconds = end - start;
-	elapsed_seconds = elapsed_seconds;
+	duration<float> elapsed_seconds = end - start;
 	//pthread_t thId = pthread_self();
-	
-	//cout << elapsed_seconds.count() <<endl;
+		
+	cout << std::fixed << std::setprecision(15) << elapsed_seconds.count() <<endl;
+	//printf("%.15f '\n'", elapsed_seconds.count());
+
+	//method2();
 
 
-	method2();
 	//cout << thId<<endl;
 	//method2();
 	//method3();
@@ -184,7 +170,7 @@ void method2()
 	end = system_clock::now();
 	duration<double> elapsed_seconds = end - start;
 	elapsed_seconds = elapsed_seconds;
-	cout << elapsed_seconds.count() <<endl;
+	//cout << elapsed_seconds.count() <<endl;
 	global_int_for_method_2++;
 	ticket_array[global_int_for_method_2] = true;
 }
