@@ -7,7 +7,7 @@
 #include <thread>
 #include <stdlib.h>
 
-const int num = 5;
+const int num = 10;
 pthread_t total_thread[num];
 pthread_t pthread_self(void);
 bool all_threads_created = false;
@@ -19,11 +19,12 @@ pthread_t threadid[num] = {0};
 pthread_t setlock;
 int setlock_counter = 0;
 int current_lock = 0;
+int global_int_for_method_2 = 0;
 
 pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t method1_lock = PTHREAD_MUTEX_INITIALIZER;
 
-const int ticket_total = 5;
+const int ticket_total = 10;
 bool ticket_array[ticket_total] = {false};
 
 void door();
@@ -64,7 +65,7 @@ int main(){
 	//time_point<system_clock> start,end;
 	//start = system_clock::now();
 
-	//ticket_array[0] = true;
+	ticket_array[0] = true;
 	
 	create_threads();
 
@@ -87,7 +88,9 @@ int main(){
 void create_threads()
 {
 	for (int i = 0; i < num; i++){
-        pthread_create(&(total_thread[i]), NULL, start_func, NULL);
+		int* ix = &i;
+        pthread_create(&(total_thread[i]), NULL, start_func, &i);//(void*) &i/*NULL*/);
+        //global_int_for_method_2++;
     }
     all_threads_created = true;	
 }
@@ -106,20 +109,26 @@ void *start_func(void* ptr)
 	//pthread_t thId = pthread_self();
 	//Ticket_Lock ticket;
 	//ticket.set_number(thId);
+	
+	//cout << "CELL_ARR  " << *((int *)ptr)<< endl;
+
 	while(!all_threads_created)
 	{}	
 
 	time_point<system_clock> start,end;
 	start = system_clock::now();
-	pthread_mutex_lock(&method1_lock);
-	method1();
-	pthread_mutex_unlock(&method1_lock);
+	//pthread_mutex_lock(&method1_lock);
+	//method1();
+	//pthread_mutex_unlock(&method1_lock);
 	end = system_clock::now();
 	duration<double> elapsed_seconds = end - start;
 	elapsed_seconds = elapsed_seconds;
 	//pthread_t thId = pthread_self();
 	
-	cout << elapsed_seconds.count() <<endl;
+	//cout << elapsed_seconds.count() <<endl;
+
+
+	method2();
 	//cout << thId<<endl;
 	//method2();
 	//method3();
@@ -165,31 +174,19 @@ void method1()
 }
 void method2()
 {
-	int total = 0;
-
-	time_point<high_resolution_clock> start,end;
+	//int cell_num = global_int_for_method_2;
+	time_point<system_clock> start,end;
 	start = system_clock::now();
-
-
-	while(ticket_array[total] != true)
+	while(ticket_array[global_int_for_method_2] != true)
 	{
 
-		if(total < ticket_total)
-			total++;
 	}
-	if(ticket_array[total] == true)
-	{
-		if(total <= ticket_total-1)
-			ticket_array[total+1] = true;
-	}
-	
 	end = system_clock::now();
 	duration<double> elapsed_seconds = end - start;
-	elapsed_seconds = elapsed_seconds * 1000000;
-
-	pthread_t thId = pthread_self();
-	
-	cout << thId << "\t" << elapsed_seconds.count() << "method2" <<endl;
+	elapsed_seconds = elapsed_seconds;
+	cout << elapsed_seconds.count() <<endl;
+	global_int_for_method_2++;
+	ticket_array[global_int_for_method_2] = true;
 }
 void method3()
 {
