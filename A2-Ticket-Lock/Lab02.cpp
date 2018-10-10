@@ -7,7 +7,7 @@
 #include <thread>
 #include <stdlib.h>
 
-const int num = 3;
+const int num = 5;
 pthread_t total_thread[num];
 pthread_t pthread_self(void);
 bool all_threads_created = false;
@@ -15,15 +15,15 @@ pthread_t main_thread = pthread_self();
 
 int count = 0;
 int current_num_of_thread = 0;
-int threadid[num] = {0};
-int setlock = 0;
+pthread_t threadid[num] = {0};
+pthread_t setlock;
 int setlock_counter = 0;
 int current_lock = 0;
 
 pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t method1_lock = PTHREAD_MUTEX_INITIALIZER;
 
-const int ticket_total = 3;
+const int ticket_total = 5;
 bool ticket_array[ticket_total] = {false};
 
 void door();
@@ -64,13 +64,13 @@ int main(){
 	//time_point<system_clock> start,end;
 	//start = system_clock::now();
 
-	ticket_array[0] = true;
+	//ticket_array[0] = true;
 	
 	create_threads();
 
-	while(!all_threads_created)
-	{	}	
-	setlock = threadid[0];
+	//while(!all_threads_created)
+	//{	}	
+	//setlock = threadid[0];
 	
 	//Ticket_Lock ticket;
 	//ticket.set_number(thId);
@@ -98,33 +98,36 @@ void *start_func(void* ptr)
 	//threadid[current_num_of_thread] = thId;
 	//current_num_of_thread = 0;
 	//start = system_clock::now();
-	pthread_t thId = pthread_self();
-	threadid[setlock_counter] = thId;
-	setlock_counter++;
+	//pthread_t thId = pthread_self();
+	//threadid[setlock_counter] = thId;
+	//setlock_counter++;
 
-	for(int i; i<num;i++)
-	{
-		cout<<threadid[i]<<endl;
-	}
+	
 	//pthread_t thId = pthread_self();
 	//Ticket_Lock ticket;
 	//ticket.set_number(thId);
 	while(!all_threads_created)
 	{}	
+
 	time_point<system_clock> start,end;
 	start = system_clock::now();
-	//method1();
-	//method2();
-	//method3();
+	pthread_mutex_lock(&method1_lock);
+	method1();
+	pthread_mutex_unlock(&method1_lock);
 	end = system_clock::now();
-
-
-	//duration<double> elapsed_seconds = end - start;
-	//elapsed_seconds = elapsed_seconds * 1000000;
+	duration<double> elapsed_seconds = end - start;
+	elapsed_seconds = elapsed_seconds;
 	//pthread_t thId = pthread_self();
 	
-	//cout << thId << "\t" << elapsed_seconds.count() <<endl;
-	cout << thId<<endl;
+	cout << elapsed_seconds.count() <<endl;
+	//cout << thId<<endl;
+	//method2();
+	//method3();
+	
+
+
+	
+	
 	//method2();
 	
 }
@@ -145,20 +148,20 @@ void door()
 
 void method1()
 {
-	pthread_mutex_lock(&method1_lock);
+	/*
 	time_point<system_clock> start,end;
 	start = system_clock::now();
-	door();
+	//door();
 	end = system_clock::now();
 	duration<double> elapsed_seconds = end - start;
-	elapsed_seconds = elapsed_seconds * 1000000;
+	elapsed_seconds = elapsed_seconds;
 
 	pthread_t thId = pthread_self();
-	
-	cout << thId << "\t" << elapsed_seconds.count() << "method1" << endl;
+	*/
+	//cout << thId << "\t" << elapsed_seconds.count() << "method1" << endl;
 
 	
-	pthread_mutex_unlock(&method1_lock);
+	
 }
 void method2()
 {
@@ -167,8 +170,10 @@ void method2()
 	time_point<high_resolution_clock> start,end;
 	start = system_clock::now();
 
+
 	while(ticket_array[total] != true)
 	{
+
 		if(total < ticket_total)
 			total++;
 	}
@@ -193,10 +198,9 @@ void method3()
 	start = system_clock::now();
 	while(setlock != thId)
 	{
-		setlock = threadid[current_lock];
-		
+		setlock = threadid[current_lock];		
 	}
-	if(current_lock < num-2)
+	if(current_lock < num-1)
 	{
 		current_lock++;
 		setlock = threadid[current_lock]; 
@@ -204,7 +208,7 @@ void method3()
 	
 	end = system_clock::now();
 	duration<double> elapsed_seconds = end - start;
-	elapsed_seconds = elapsed_seconds * 1000000;
+	elapsed_seconds = elapsed_seconds * 1000;
 	cout << thId << "\t" << elapsed_seconds.count() <<endl;
 }
 void ticket_lock()
