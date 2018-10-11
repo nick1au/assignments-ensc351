@@ -32,7 +32,7 @@ void create_threads(int num);
 void add_one();
 
 bool all_threads_created = false;
-const int num_threads = 100;
+const int num_threads = 1000;
 //bool pthread_lock = false;
 
 // pthread_imp
@@ -42,11 +42,13 @@ const int num_threads = 100;
 std::thread arr_th[num_threads];
 std::mutex thread_lock;
 
-const int method = 2; // 1 = brute-force, 2 = spin, 3 = ticket queue
+const int method = 1; // 1 = brute-force, 2 = spin, 3 = ticket queue
 int count = 0;
 
 //std::atomic_flag flag[num_threads] = {ATOMIC_FLAG_INIT};
 bool flag[num_threads] = {true}; // false = locked, true = available
+
+int ticket_q[num_threads] = {-1};
 
 using namespace std;
 using namespace std::chrono;
@@ -108,7 +110,9 @@ void start_func(int ix){
         }
     }
     else if (method == 3){ //ticket-lock
-        
+        std::thread::id this_id = this_thread::get_id();
+        //if (ticket_q[])
+        //ticket_q[ix] = this_id;
     }
 
     end = system_clock::now();
