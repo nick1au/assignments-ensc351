@@ -22,11 +22,11 @@ struct logdata {
 	void* id;
 	int pid;
 	int tid;
-	int ts;
+	double ts;
 };
 
 void trace_start(const char* filename); // char vs const char
-void trace_event_start(char* name, char* categories, char* arguments);
+void trace_event_start(char* name, char* categories, char* arguments, int tid);
 void trace_event_end(char* arguments);
 void trace_instant_global(char* name);
 void trace_object_new(char* name, void* obj_pointer);
@@ -42,7 +42,7 @@ ofstream filestr;
 logdata *myData;
 int counter;
 int write_state = 0; // 0 never written, 1 written
-time_point<system_clock> start*,end*;
+time_point<system_clock> start_pt,end_pt;
 /*
 int main()
 {
@@ -70,16 +70,22 @@ void trace_start(const char* filename) {
 	counter = 0;
 }
 
-void trace_event_start(char* name, char* categories, char* arguments) {
+void trace_event_start(char* name, char* categories, char* arguments, int tid) {
 	(myData[counter]).name = (string)name;
 	(myData[counter]).cat = (string)categories;
 	(myData[counter]).ph = "B";
 	(myData[counter]).pid = 1;
-	(myData[counter]).tid = 1;
+	(myData[counter]).tid = tid; //1;
 	if (counter == 0) {
-		start = system_clock::now();
+		(myData[counter]).ts = 0;
+		start_pt = system_clock::now();
 	}
-	(myData[counter]).ts = start;
+	else{
+		end_pt = system_clock::now();
+		duration<double> elapsed_seconds = end_pt - start_pt;
+		(myData[counter]).ts = elapsed_seconds.count();
+	}
+	//(myData[counter]).ts = start;
 	
 
 	//cout << "name " << (myData[counter]).name << " cat " << (myData[counter]).cat << " ph "<< (myData[counter]).ph << " pid " << (myData[counter]).pid << " tid " << (myData[counter]).tid << endl;
@@ -101,11 +107,12 @@ void trace_event_end(char* arguments) {
 		(myData[counter]).ph = "E";
 		(myData[counter]).pid = (myData[test_c]).pid;
 		(myData[counter]).tid = (myData[test_c]).tid;
-        (myData[counter]).ts = start;
-        end = system_clock::now();
-	    duration<double> elapsed_seconds = (end - start)/1000; // ms
-	    (myData[counter]).ts = elapsed_seconds;
-		
+        
+        end_pt = system_clock::now();
+	    duration<double> elapsed_seconds = (end_pt - start_pt);
+		(myData[counter]).ts = elapsed_seconds.count();
+	    //(myData[counter]).ts = elapsed_seconds;
+		//(myData[counter]).ts = start_pt;	
 
 		//cout << "name " << (myData[counter]).name << " cat " << (myData[counter]).cat << " ph " << (myData[counter]).ph << " pid " << (myData[counter]).pid << " tid " << (myData[counter]).tid << endl;
 		//write_to_text();
@@ -128,21 +135,28 @@ void write_to_text() {
 		filestr << "[ ";
 		write_state = 1;
 	}
+	
 
 	for (int i = 0; i < counter; i++)
 	{
+		if (i > 0){
+			filestr << "," << endl << "  ";
+		}
+		
 		if (check_event(i) == 0)
 			print_Instant_event(i);
 		else{
 
-			filestr << "{ \"name\" : " << "\"" << myData[i].name << "\","
-				<< "\"cat\":" << "\"" << myData[i].cat << "\","
-				<< "\"ph\":" << "\"" << myData[i].ph << "\","
-				<< "\"pid\":" << "\"" << myData[i].pid << "\","
-				<< "\"tid\":" << "\"" << myData[i].tid << "\","
-				<< "\"ts\":" << "\"" << myData[i].ts << "\" }" << endl;
+			filestr << "{\"name\": " << "\"" << myData[i].name << "\","
+				<< " \"cat\": " << "\"" << myData[i].cat << "\","
+				<< " \"ph\": " << "\"" << myData[i].ph << "\","
+				<< " \"pid\": " << myData[i].pid << ","
+				<< " \"tid\": " << myData[i].tid << ","
+				<< " \"ts\": " << myData[i].ts << "}";
 		}
 	}
+	write_state = 1;
+	counter = 0; // reset
 }
 
 void print_Instant_event(int i)
