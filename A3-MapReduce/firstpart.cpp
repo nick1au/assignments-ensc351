@@ -6,8 +6,11 @@
 #include <map>
 #include <iterator>  //for iterator
 #include <vector>
+#include <chrono>
+#include <ctime>
 
 using namespace std;
+using namespace std::chrono;
 
 void input_reader(std::vector<string> &v);
 void mapper(std::map<string, int> &map, std::vector<string> &v);
@@ -16,6 +19,9 @@ void print_map(std::map<string, int> &wordcounts);
 
 
 int main(){
+
+	time_point<system_clock> start,end;
+	start = system_clock::now();
 
 	std::vector<string> v;
 	std::vector<pair<string, int>> map_vector;
@@ -64,9 +70,14 @@ int main(){
 		}
 	}
 
-	for(int i = 0; i < map_vector.size(); i++)
-		cout << map_vector.at(i).first << "\t" << map_vector.at(i).second << endl;
-		
+	//for(int i = 0; i < map_vector.size(); i++)
+	//	cout << map_vector.at(i).first << "\t" << map_vector.at(i).second << endl;
+
+	end = system_clock::now();
+	duration<double> elapsed_seconds = end - start;
+	
+	cout << elapsed_seconds.count() <<endl;
+
 	return 0;
 }
 
