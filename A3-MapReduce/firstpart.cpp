@@ -8,6 +8,7 @@
 #include <vector>
 #include <chrono>
 #include <ctime>
+#include "Trace-lib.h"
 
 using namespace std;
 using namespace std::chrono;
@@ -22,7 +23,7 @@ int main(){
 
 	time_point<system_clock> start,end;
 	start = system_clock::now();
-
+	
 	std::vector<string> v;
 	std::vector<pair<string, int>> map_vector;
 	pair<string, int> temp;
@@ -30,6 +31,8 @@ int main(){
 	std::map<string, int>::iterator jt;
 	std::map<string, int>::iterator kt;
 	std::pair<std::map<string, int>::iterator, bool> it;
+	trace_start("log1.json");
+	trace_event_start((char*) "Input", (char*) "prog", (char*) "arg", -1);
 	ifstream inFile;
 	inFile.open("sample.txt");
 	string str;
@@ -43,7 +46,8 @@ int main(){
 	{
 		v.push_back(str);
 	}
-
+	trace_event_end((char*) "arg", -1);
+	trace_event_start((char*) "Map and Reduce", (char*) "prog", (char*) "arg", -1);
 	for(int i = 0; i < v.size(); i++)
 	{
 		str = v.at(i);
@@ -52,11 +56,12 @@ int main(){
 			it.first->second++;
 
 	}
-	
-
+	trace_event_end((char*) "arg", -1);
+	trace_event_start((char*) "Move to vector", (char*) "prog", (char*) "arg", -1);
 	for(jt = wordcounts.begin(); jt != wordcounts.end(); jt++)
 		map_vector.push_back(*jt);
-
+	trace_event_end((char*) "arg", -1);
+	trace_event_start((char*) "Sort", (char*) "prog", (char*) "arg", -1);
 	for(int i = 0; i < map_vector.size(); i++)
 	{
 		for(int j = i+1; j < map_vector.size(); j++)
@@ -69,15 +74,17 @@ int main(){
 			}
 		}
 	}
-
+	trace_event_end((char*) "arg", -1);
 	//for(int i = 0; i < map_vector.size(); i++)
 	//	cout << map_vector.at(i).first << "\t" << map_vector.at(i).second << endl;
+	 write_to_text();
+	trace_end();
 
 	end = system_clock::now();
 	duration<double> elapsed_seconds = end - start;
 	
 	cout << elapsed_seconds.count() <<endl;
-
+	
 	return 0;
 }
 

@@ -1,0 +1,8 @@
+[ {"name": "Input", "cat": "prog", "ph": "B", "pid": 1, "tid": -1, "ts": 0},
+  {"name": "Input", "cat": "prog", "ph": "E", "pid": 1, "tid": -1, "ts": 296956},
+  {"name": "Map and Reduce", "cat": "prog", "ph": "B", "pid": 1, "tid": -1, "ts": 300164},
+  {"name": "Map and Reduce", "cat": "prog", "ph": "E", "pid": 1, "tid": -1, "ts": 897316},
+  {"name": "Move to vector", "cat": "prog", "ph": "B", "pid": 1, "tid": -1, "ts": 897502},
+  {"name": "Move to vector", "cat": "prog", "ph": "E", "pid": 1, "tid": -1, "ts": 917741},
+  {"name": "Sort", "cat": "prog", "ph": "B", "pid": 1, "tid": -1, "ts": 917920},
+  {"name": "Sort", "cat": "prog", "ph": "E", "pid": 1, "tid": -1, "ts": 921801}]

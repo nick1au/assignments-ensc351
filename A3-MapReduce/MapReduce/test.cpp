@@ -9,6 +9,7 @@
 #include <ctime>
 #include <stdlib.h>
 #include <algorithm>
+#include "Trace-lib.h"
 
 #define total_threads 4
 
@@ -43,20 +44,29 @@ bool waytosortbyint(pair<string, int> pair1, pair<string, int> pair2)
 int main() {
 	time_point<system_clock> start,end;
 	start = system_clock::now();
+	trace_start("log.json");
 
 	std::vector<string> v;
 	std::vector<pair<string, int>> reduced_vect;
-	
+	trace_event_start((char*) "Input", (char*) "prog", (char*) "arg", -1);
     input_reader(v);  
-    
+	trace_event_end((char*) "arg", -1);
+    trace_event_start((char*) "Map-full", (char*) "prog", (char*) "arg", 0);
+	trace_event_start((char*) "Map-full", (char*) "prog", (char*) "arg", 1);
+	trace_event_start((char*) "Map-full", (char*) "prog", (char*) "arg", 2);
+	trace_event_start((char*) "Map-full", (char*) "prog", (char*) "arg", 3);
     for(int i = 0; i < total_threads; i++) //total number of threads.
     	threadid[i] = thread(mapper_wrapper, i, ref(v));
     for(int i = 0; i < total_threads; i++)
     	threadid[i].join();
 
+	trace_event_start((char*) "Sort", (char*) "prog", (char*) "arg", -1);
     sort(collected_map.begin(), collected_map.end(), waytosort);
+	trace_event_end((char*) "arg", -1);
     int j = 0;
 	int i = 0;
+	
+	trace_event_start((char*) "Reduce", (char*) "prog", (char*) "arg", -1);
 	for(; i < collected_map.size();)
 	{
 		j = i + 1;
@@ -72,15 +82,23 @@ int main() {
 		if(i == collected_map.size() - 1 && j == collected_map.size() - 1)
 			reduced_vect.push_back(reducer(make_vect(collected_map, i, j+1)));
 	}
+	trace_event_end((char*) "arg", -1);
+	
+	trace_event_start((char*) "Sort2", (char*) "prog", (char*) "arg", -1);
 	sort(reduced_vect.begin(),reduced_vect.end(),waytosortbyint);
-    print_vect(reduced_vect);
+	trace_event_end((char*) "arg", -1);
+	
+	trace_event_start((char*) "Print", (char*) "prog", (char*) "arg", -1);
+    //print_vect(reduced_vect);
+	trace_event_end((char*) "arg", -1);
 	//print_vect(reduced_vect);
 
 	end = system_clock::now();
 	duration<double> elapsed_seconds = end - start;
 	
 	cout << elapsed_seconds.count() <<endl;
-    
+    write_to_text();
+	trace_end();
     return 0;
 }
 
@@ -110,7 +128,8 @@ pair<string, int> mapper(string str)
 }
 
 void mapper_wrapper(int tid, vector<string> &input_vector)
-{
+{	
+	trace_event_start((char*) "Map", (char*) "prog", (char*) "arg", tid);
 	thread_lock.lock();
 	pair<string, int> map_entry;
 	string word;
@@ -121,6 +140,8 @@ void mapper_wrapper(int tid, vector<string> &input_vector)
 		collected_map.push_back(map_entry);
 	}
 	thread_lock.unlock();
+	trace_event_end((char*) "arg", tid);
+	trace_event_end((char*) "arg", tid);
 }
 
 void print_vect(std::vector<pair<string, int>> &vect)

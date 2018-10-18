@@ -1,0 +1,977 @@
+desc: (none)
+cmd: ./a.out
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=2195771
+mem_heap_B=72704
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=2322538
+mem_heap_B=1753456
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=6490951
+mem_heap_B=1754008
+mem_heap_extra_B=64
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=7515671
+mem_heap_B=1827736
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=8520049
+mem_heap_B=1893272
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=10527717
+mem_heap_B=2024344
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=13091254
+mem_heap_B=2548632
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=14541955
+mem_heap_B=2286488
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=19668848
+mem_heap_B=3335064
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=22569533
+mem_heap_B=3335064
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3335064 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1672008 0x10A13C: trace_start(char const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n0: 1672008 0x10B37F: main (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+ n1: 1572864 0x10FEA2: __gnu_cxx::new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n1: 1572864 0x10F549: std::allocator_traits<std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&, unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+   n1: 1572864 0x10EC36: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+    n1: 1572864 0x10DB8E: void std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_realloc_insert<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+     n1: 1572864 0x10D04C: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::push_back(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+      n1: 1572864 0x10BA44: input_reader(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+       n0: 1572864 0x10B3C8: main (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+ n1: 72704 0x4EC2374: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010731: _dl_init (dl-init.c:72)
+   n0: 72704 0x40010C8: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n0: 17488 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=11
+#-----------
+time=22569533
+mem_heap_B=2810776
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=32823249
+mem_heap_B=4907928
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=38623879
+mem_heap_B=4907928
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=detailed
+n4: 4907928 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3145728 0x10FEA2: __gnu_cxx::new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n1: 3145728 0x10F549: std::allocator_traits<std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&, unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+   n1: 3145728 0x10EC36: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+    n1: 3145728 0x10DB8E: void std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_realloc_insert<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+     n1: 3145728 0x10D04C: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::push_back(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+      n1: 3145728 0x10BA44: input_reader(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+       n0: 3145728 0x10B3C8: main (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+ n1: 1672008 0x10A13C: trace_start(char const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n0: 1672008 0x10B37F: main (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+ n1: 72704 0x4EC2374: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010731: _dl_init (dl-init.c:72)
+   n0: 72704 0x40010C8: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n0: 17488 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=38623879
+mem_heap_B=3859352
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=41900530
+mem_heap_B=3851160
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=43063393
+mem_heap_B=3932848
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=44187453
+mem_heap_B=4014768
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=detailed
+n5: 4014768 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x10FEA2: __gnu_cxx::new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n1: 2097152 0x10F549: std::allocator_traits<std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&, unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+   n1: 2097152 0x10EC36: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+    n1: 2097152 0x10DB8E: void std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_realloc_insert<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+     n1: 2097152 0x10D04C: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::push_back(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+      n1: 2097152 0x10BA44: input_reader(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+       n0: 2097152 0x10B3C8: main (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+ n1: 1672008 0x10A13C: trace_start(char const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n0: 1672008 0x10B37F: main (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+ n1: 163840 0x10FF62: __gnu_cxx::new_allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> >::allocate(unsigned long, void const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n1: 163840 0x10F62E: std::allocator_traits<std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::allocate(std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> >&, unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+   n1: 163840 0x10EE86: std::_Vector_base<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::_M_allocate(unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+    n1: 163840 0x10DE9C: void std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::_M_realloc_insert<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> const&>(__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>*, std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > > >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+     n1: 163840 0x10D1C8: std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::push_back(std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+      n1: 163840 0x10BC93: mapper_wrapper(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+       n1: 163840 0x10D7F7: void std::__invoke_impl<void, void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >(std::__invoke_other, void (*&&)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int&&, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+        n1: 163840 0x10CCB8: std::__invoke_result<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >::type std::__invoke<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >(void (*&&)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int&&, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+         n1: 163840 0x1110CD: decltype (__invoke((_S_declval<0ul>)(), (_S_declval<1ul>)(), (_S_declval<2ul>)())) std::thread::_Invoker<std::tuple<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > >::_M_invoke<0ul, 1ul, 2ul>(std::_Index_tuple<0ul, 1ul, 2ul>) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+          n1: 163840 0x111052: std::thread::_Invoker<std::tuple<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > >::operator()() (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+           n1: 163840 0x111022: std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > > >::_M_run() (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+            n1: 163840 0x4EF057D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+             n1: 163840 0x53DB6D9: start_thread (pthread_create.c:463)
+              n0: 163840 0x571488D: clone (clone.S:95)
+ n1: 72704 0x4EC2374: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010731: _dl_init (dl-init.c:72)
+   n0: 72704 0x40010C8: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n0: 9064 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=18
+#-----------
+time=45598417
+mem_heap_B=4342448
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=46434741
+mem_heap_B=4178608
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=49256017
+mem_heap_B=4833968
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=50927925
+mem_heap_B=4506288
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=51837540
+mem_heap_B=4506896
+mem_heap_extra_B=104
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=56583647
+mem_heap_B=5817616
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=detailed
+n5: 5817616 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x10FEA2: __gnu_cxx::new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n1: 2097152 0x10F549: std::allocator_traits<std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&, unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+   n1: 2097152 0x10EC36: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+    n1: 2097152 0x10DB8E: void std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_realloc_insert<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+     n1: 2097152 0x10D04C: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::push_back(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+      n1: 2097152 0x10BA44: input_reader(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+       n0: 2097152 0x10B3C8: main (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+ n1: 1966080 0x10FF62: __gnu_cxx::new_allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> >::allocate(unsigned long, void const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n1: 1966080 0x10F62E: std::allocator_traits<std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::allocate(std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> >&, unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+   n1: 1966080 0x10EE86: std::_Vector_base<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::_M_allocate(unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+    n1: 1966080 0x10DE9C: void std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::_M_realloc_insert<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> const&>(__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>*, std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > > >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+     n1: 1966080 0x10D1C8: std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::push_back(std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+      n1: 1966080 0x10BC93: mapper_wrapper(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+       n1: 1966080 0x10D7F7: void std::__invoke_impl<void, void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >(std::__invoke_other, void (*&&)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int&&, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+        n1: 1966080 0x10CCB8: std::__invoke_result<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >::type std::__invoke<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >(void (*&&)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int&&, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+         n1: 1966080 0x1110CD: decltype (__invoke((_S_declval<0ul>)(), (_S_declval<1ul>)(), (_S_declval<2ul>)())) std::thread::_Invoker<std::tuple<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > >::_M_invoke<0ul, 1ul, 2ul>(std::_Index_tuple<0ul, 1ul, 2ul>) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+          n1: 1966080 0x111052: std::thread::_Invoker<std::tuple<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > >::operator()() (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+           n1: 1966080 0x111022: std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > > >::_M_run() (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+            n1: 1966080 0x4EF057D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+             n1: 1966080 0x53DB6D9: start_thread (pthread_create.c:463)
+              n0: 1966080 0x571488D: clone (clone.S:95)
+ n1: 1672008 0x10A13C: trace_start(char const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n0: 1672008 0x10B37F: main (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+ n1: 72704 0x4EC2374: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010731: _dl_init (dl-init.c:72)
+   n0: 72704 0x40010C8: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n0: 9672 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=24
+#-----------
+time=59926723
+mem_heap_B=5817616
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=detailed
+n5: 5817616 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x10FEA2: __gnu_cxx::new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n1: 2097152 0x10F549: std::allocator_traits<std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&, unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+   n1: 2097152 0x10EC36: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+    n1: 2097152 0x10DB8E: void std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_realloc_insert<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+     n1: 2097152 0x10D04C: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::push_back(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+      n1: 2097152 0x10BA44: input_reader(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+       n0: 2097152 0x10B3C8: main (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+ n1: 1966080 0x10FF62: __gnu_cxx::new_allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> >::allocate(unsigned long, void const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n1: 1966080 0x10F62E: std::allocator_traits<std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::allocate(std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> >&, unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+   n1: 1966080 0x10EE86: std::_Vector_base<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::_M_allocate(unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+    n1: 1966080 0x10DE9C: void std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::_M_realloc_insert<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> const&>(__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>*, std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > > >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+     n1: 1966080 0x10D1C8: std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::push_back(std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+      n1: 1966080 0x10BC93: mapper_wrapper(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+       n1: 1966080 0x10D7F7: void std::__invoke_impl<void, void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >(std::__invoke_other, void (*&&)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int&&, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+        n1: 1966080 0x10CCB8: std::__invoke_result<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >::type std::__invoke<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >(void (*&&)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int&&, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+         n1: 1966080 0x1110CD: decltype (__invoke((_S_declval<0ul>)(), (_S_declval<1ul>)(), (_S_declval<2ul>)())) std::thread::_Invoker<std::tuple<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > >::_M_invoke<0ul, 1ul, 2ul>(std::_Index_tuple<0ul, 1ul, 2ul>) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+          n1: 1966080 0x111052: std::thread::_Invoker<std::tuple<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > >::operator()() (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+           n1: 1966080 0x111022: std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > > >::_M_run() (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+            n1: 1966080 0x4EF057D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+             n1: 1966080 0x53DB6D9: start_thread (pthread_create.c:463)
+              n0: 1966080 0x571488D: clone (clone.S:95)
+ n1: 1672008 0x10A13C: trace_start(char const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n0: 1672008 0x10B37F: main (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+ n1: 72704 0x4EC2374: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010731: _dl_init (dl-init.c:72)
+   n0: 72704 0x40010C8: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n0: 9672 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=25
+#-----------
+time=61729938
+mem_heap_B=5162544
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=68275779
+mem_heap_B=5162512
+mem_heap_extra_B=104
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=71218549
+mem_heap_B=7783952
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=77903961
+mem_heap_B=7783952
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=peak
+n4: 7783952 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3932160 0x10FF62: __gnu_cxx::new_allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> >::allocate(unsigned long, void const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n1: 3932160 0x10F62E: std::allocator_traits<std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::allocate(std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> >&, unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+   n1: 3932160 0x10EE86: std::_Vector_base<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::_M_allocate(unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+    n1: 3932160 0x10DE9C: void std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::_M_realloc_insert<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> const&>(__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>*, std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > > >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+     n1: 3932160 0x10D1C8: std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::push_back(std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+      n1: 3932160 0x10BC93: mapper_wrapper(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+       n1: 3932160 0x10D7F7: void std::__invoke_impl<void, void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >(std::__invoke_other, void (*&&)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int&&, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+        n1: 3932160 0x10CCB8: std::__invoke_result<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >::type std::__invoke<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >(void (*&&)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int&&, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+         n1: 3932160 0x1110CD: decltype (__invoke((_S_declval<0ul>)(), (_S_declval<1ul>)(), (_S_declval<2ul>)())) std::thread::_Invoker<std::tuple<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > >::_M_invoke<0ul, 1ul, 2ul>(std::_Index_tuple<0ul, 1ul, 2ul>) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+          n1: 3932160 0x111052: std::thread::_Invoker<std::tuple<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > >::operator()() (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+           n1: 3932160 0x111022: std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > > >::_M_run() (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+            n1: 3932160 0x4EF057D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+             n1: 3932160 0x53DB6D9: start_thread (pthread_create.c:463)
+              n0: 3932160 0x571488D: clone (clone.S:95)
+ n1: 2097152 0x10FEA2: __gnu_cxx::new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n1: 2097152 0x10F549: std::allocator_traits<std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&, unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+   n1: 2097152 0x10EC36: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+    n1: 2097152 0x10DB8E: void std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_realloc_insert<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+     n1: 2097152 0x10D04C: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::push_back(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+      n1: 2097152 0x10BA44: input_reader(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+       n0: 2097152 0x10B3C8: main (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+ n1: 1672008 0x10A13C: trace_start(char const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n0: 1672008 0x10B37F: main (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+ n0: 82632 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=29
+#-----------
+time=77903961
+mem_heap_B=6473232
+mem_heap_extra_B=104
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=81508276
+mem_heap_B=6473200
+mem_heap_extra_B=96
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=310330510
+mem_heap_B=6473240
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=312325000
+mem_heap_B=6596120
+mem_heap_extra_B=128
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=313832641
+mem_heap_B=6596160
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=315768327
+mem_heap_B=6596240
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=317440041
+mem_heap_B=6473360
+mem_heap_extra_B=104
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=318347303
+mem_heap_B=6596240
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=319733271
+mem_heap_B=6514480
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=320461713
+mem_heap_B=6473520
+mem_heap_extra_B=104
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=321795385
+mem_heap_B=6596400
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=323467099
+mem_heap_B=6473520
+mem_heap_extra_B=104
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=324622139
+mem_heap_B=6514480
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=325607223
+mem_heap_B=6637360
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=326779814
+mem_heap_B=6473880
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=328469284
+mem_heap_B=6494320
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=329800976
+mem_heap_B=6473880
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=detailed
+n5: 6473880 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2622120 0x10FF62: __gnu_cxx::new_allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> >::allocate(unsigned long, void const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n1: 2622120 0x10F62E: std::allocator_traits<std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::allocate(std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> >&, unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+   n2: 2622120 0x10EE86: std::_Vector_base<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::_M_allocate(unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+    n1: 2621480 0x10DE9C: void std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::_M_realloc_insert<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> const&>(__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>*, std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > > >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+     n2: 2621480 0x10D1C8: std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::push_back(std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+      n1: 2621440 0x10BC93: mapper_wrapper(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+       n1: 2621440 0x10D7F7: void std::__invoke_impl<void, void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >(std::__invoke_other, void (*&&)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int&&, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+        n1: 2621440 0x10CCB8: std::__invoke_result<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >::type std::__invoke<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >(void (*&&)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int&&, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+         n1: 2621440 0x1110CD: decltype (__invoke((_S_declval<0ul>)(), (_S_declval<1ul>)(), (_S_declval<2ul>)())) std::thread::_Invoker<std::tuple<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > >::_M_invoke<0ul, 1ul, 2ul>(std::_Index_tuple<0ul, 1ul, 2ul>) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+          n1: 2621440 0x111052: std::thread::_Invoker<std::tuple<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > >::operator()() (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+           n1: 2621440 0x111022: std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > > >::_M_run() (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+            n1: 2621440 0x4EF057D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+             n1: 2621440 0x53DB6D9: start_thread (pthread_create.c:463)
+              n0: 2621440 0x571488D: clone (clone.S:95)
+      n0: 40 in 1 place, below massif's threshold (1.00%)
+    n0: 640 in 1 place, below massif's threshold (1.00%)
+ n1: 2097152 0x10FEA2: __gnu_cxx::new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n1: 2097152 0x10F549: std::allocator_traits<std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&, unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+   n1: 2097152 0x10EC36: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+    n1: 2097152 0x10DB8E: void std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_realloc_insert<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+     n1: 2097152 0x10D04C: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::push_back(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+      n1: 2097152 0x10BA44: input_reader(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+       n0: 2097152 0x10B3C8: main (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+ n1: 1672008 0x10A13C: trace_start(char const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n0: 1672008 0x10B37F: main (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+ n1: 72704 0x4EC2374: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010731: _dl_init (dl-init.c:72)
+   n0: 72704 0x40010C8: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n0: 9896 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=331660468
+mem_heap_B=6514800
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=333300540
+mem_heap_B=6596720
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=334752172
+mem_heap_B=6473880
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=335442803
+mem_heap_B=6555760
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=335704205
+mem_heap_B=6719600
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=336122737
+mem_heap_B=6637680
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=336904881
+mem_heap_B=6473840
+mem_heap_extra_B=104
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=337337386
+mem_heap_B=6473880
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=337338602
+mem_heap_B=6473960
+mem_heap_extra_B=128
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=337339544
+mem_heap_B=6473920
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=detailed
+n5: 6473920 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2622160 0x10FF62: __gnu_cxx::new_allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> >::allocate(unsigned long, void const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n1: 2622160 0x10F62E: std::allocator_traits<std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::allocate(std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> >&, unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+   n2: 2622160 0x10EE86: std::_Vector_base<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::_M_allocate(unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+    n1: 2621520 0x10DE9C: void std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::_M_realloc_insert<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> const&>(__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>*, std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > > >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+     n2: 2621520 0x10D1C8: std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::push_back(std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+      n1: 2621440 0x10BC93: mapper_wrapper(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+       n1: 2621440 0x10D7F7: void std::__invoke_impl<void, void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >(std::__invoke_other, void (*&&)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int&&, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+        n1: 2621440 0x10CCB8: std::__invoke_result<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >::type std::__invoke<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >(void (*&&)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int&&, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+         n1: 2621440 0x1110CD: decltype (__invoke((_S_declval<0ul>)(), (_S_declval<1ul>)(), (_S_declval<2ul>)())) std::thread::_Invoker<std::tuple<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > >::_M_invoke<0ul, 1ul, 2ul>(std::_Index_tuple<0ul, 1ul, 2ul>) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+          n1: 2621440 0x111052: std::thread::_Invoker<std::tuple<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > >::operator()() (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+           n1: 2621440 0x111022: std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > > >::_M_run() (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+            n1: 2621440 0x4EF057D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+             n1: 2621440 0x53DB6D9: start_thread (pthread_create.c:463)
+              n0: 2621440 0x571488D: clone (clone.S:95)
+      n0: 80 in 1 place, below massif's threshold (1.00%)
+    n0: 640 in 1 place, below massif's threshold (1.00%)
+ n1: 2097152 0x10FEA2: __gnu_cxx::new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n1: 2097152 0x10F549: std::allocator_traits<std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&, unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+   n1: 2097152 0x10EC36: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+    n1: 2097152 0x10DB8E: void std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_realloc_insert<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+     n1: 2097152 0x10D04C: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::push_back(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+      n1: 2097152 0x10BA44: input_reader(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+       n0: 2097152 0x10B3C8: main (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+ n1: 1672008 0x10A13C: trace_start(char const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n0: 1672008 0x10B37F: main (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+ n1: 72704 0x4EC2374: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010731: _dl_init (dl-init.c:72)
+   n0: 72704 0x40010C8: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n0: 9896 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=56
+#-----------
+time=337340081
+mem_heap_B=6474080
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=337341227
+mem_heap_B=6474000
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=337342017
+mem_heap_B=6474320
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=337343571
+mem_heap_B=6474160
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=337344867
+mem_heap_B=6474800
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=337347237
+mem_heap_B=6474480
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=337349545
+mem_heap_B=6475760
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=337353547
+mem_heap_B=6475120
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=337357879
+mem_heap_B=6477680
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=337365145
+mem_heap_B=6476400
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=detailed
+n5: 6476400 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2624640 0x10FF62: __gnu_cxx::new_allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> >::allocate(unsigned long, void const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n1: 2624640 0x10F62E: std::allocator_traits<std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::allocate(std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> >&, unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+   n2: 2624640 0x10EE86: std::_Vector_base<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::_M_allocate(unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+    n1: 2624000 0x10DE9C: void std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::_M_realloc_insert<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> const&>(__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>*, std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > > >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+     n2: 2624000 0x10D1C8: std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::push_back(std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+      n1: 2621440 0x10BC93: mapper_wrapper(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+       n1: 2621440 0x10D7F7: void std::__invoke_impl<void, void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >(std::__invoke_other, void (*&&)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int&&, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+        n1: 2621440 0x10CCB8: std::__invoke_result<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >::type std::__invoke<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >(void (*&&)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int&&, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+         n1: 2621440 0x1110CD: decltype (__invoke((_S_declval<0ul>)(), (_S_declval<1ul>)(), (_S_declval<2ul>)())) std::thread::_Invoker<std::tuple<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > >::_M_invoke<0ul, 1ul, 2ul>(std::_Index_tuple<0ul, 1ul, 2ul>) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+          n1: 2621440 0x111052: std::thread::_Invoker<std::tuple<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > >::operator()() (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+           n1: 2621440 0x111022: std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > > >::_M_run() (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+            n1: 2621440 0x4EF057D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+             n1: 2621440 0x53DB6D9: start_thread (pthread_create.c:463)
+              n0: 2621440 0x571488D: clone (clone.S:95)
+      n0: 2560 in 1 place, below massif's threshold (1.00%)
+    n0: 640 in 1 place, below massif's threshold (1.00%)
+ n1: 2097152 0x10FEA2: __gnu_cxx::new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n1: 2097152 0x10F549: std::allocator_traits<std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&, unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+   n1: 2097152 0x10EC36: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+    n1: 2097152 0x10DB8E: void std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_realloc_insert<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+     n1: 2097152 0x10D04C: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::push_back(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+      n1: 2097152 0x10BA44: input_reader(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+       n0: 2097152 0x10B3C8: main (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+ n1: 1672008 0x10A13C: trace_start(char const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n0: 1672008 0x10B37F: main (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+ n1: 72704 0x4EC2374: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010731: _dl_init (dl-init.c:72)
+   n0: 72704 0x40010C8: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n0: 9896 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=66
+#-----------
+time=337373525
+mem_heap_B=6481520
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=337387319
+mem_heap_B=6478960
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=337403795
+mem_heap_B=6489200
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=337430645
+mem_heap_B=6484080
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=337463313
+mem_heap_B=6504560
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=337516275
+mem_heap_B=6494320
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=337581327
+mem_heap_B=6535280
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=337686513
+mem_heap_B=6514800
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=337816333
+mem_heap_B=6596720
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=338025967
+mem_heap_B=6555760
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=detailed
+n5: 6555760 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2704000 0x10FF62: __gnu_cxx::new_allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> >::allocate(unsigned long, void const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n1: 2704000 0x10F62E: std::allocator_traits<std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::allocate(std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> >&, unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+   n2: 2704000 0x10EE86: std::_Vector_base<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::_M_allocate(unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+    n1: 2703360 0x10DE9C: void std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::_M_realloc_insert<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> const&>(__gnu_cxx::__normal_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>*, std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > > >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+     n2: 2703360 0x10D1C8: std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >::push_back(std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+      n1: 2621440 0x10BC93: mapper_wrapper(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+       n1: 2621440 0x10D7F7: void std::__invoke_impl<void, void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >(std::__invoke_other, void (*&&)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int&&, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+        n1: 2621440 0x10CCB8: std::__invoke_result<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >::type std::__invoke<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >(void (*&&)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int&&, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+         n1: 2621440 0x1110CD: decltype (__invoke((_S_declval<0ul>)(), (_S_declval<1ul>)(), (_S_declval<2ul>)())) std::thread::_Invoker<std::tuple<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > >::_M_invoke<0ul, 1ul, 2ul>(std::_Index_tuple<0ul, 1ul, 2ul>) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+          n1: 2621440 0x111052: std::thread::_Invoker<std::tuple<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > >::operator()() (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+           n1: 2621440 0x111022: std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(int, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&), int, std::reference_wrapper<std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > > > >::_M_run() (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+            n1: 2621440 0x4EF057D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+             n1: 2621440 0x53DB6D9: start_thread (pthread_create.c:463)
+              n0: 2621440 0x571488D: clone (clone.S:95)
+      n1: 81920 0x10C29D: make_vect(std::vector<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> > >&, int, int) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+       n0: 81920 0x10B6A3: main (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+    n0: 640 in 1 place, below massif's threshold (1.00%)
+ n1: 2097152 0x10FEA2: __gnu_cxx::new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n1: 2097152 0x10F549: std::allocator_traits<std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::allocate(std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&, unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+   n1: 2097152 0x10EC36: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+    n1: 2097152 0x10DB8E: void std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_realloc_insert<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+     n1: 2097152 0x10D04C: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::push_back(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+      n1: 2097152 0x10BA44: input_reader(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+       n0: 2097152 0x10B3C8: main (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+ n1: 1672008 0x10A13C: trace_start(char const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n0: 1672008 0x10B37F: main (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+ n1: 72704 0x4EC2374: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010731: _dl_init (dl-init.c:72)
+   n0: 72704 0x40010C8: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+ n0: 9896 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=76
+#-----------
+time=338415279
+mem_heap_B=6473840
+mem_heap_extra_B=104
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=338468119
+mem_heap_B=6477936
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=338701899
+mem_heap_B=6469744
+mem_heap_extra_B=104
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=338702303
+mem_heap_B=6469192
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=338703155
+mem_heap_B=6468552
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=339919312
+mem_heap_B=4371400
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=341515412
+mem_heap_B=1749960
+mem_heap_extra_B=64
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=341524567
+mem_heap_B=1677256
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=341526264
+mem_heap_B=1673160
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=341528607
+mem_heap_B=1672872
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1672872 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1672008 0x10A13C: trace_start(char const*) (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+  n0: 1672008 0x10B37F: main (in /mnt/c/Users/Nicholas/Documents/GitHub/assignments-ensc351/A3-MapReduce/mapreduce/a.out)
+ n0: 864 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=86
+#-----------
+time=341530420
+mem_heap_B=1672584
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=87
+#-----------
+time=341530840
+mem_heap_B=1672296
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=88
+#-----------
+time=341531260
+mem_heap_B=1672008
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty

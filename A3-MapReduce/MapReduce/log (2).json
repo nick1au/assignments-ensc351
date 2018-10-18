@@ -1,0 +1,10 @@
+[ {"name": "Input", "cat": "prog", "ph": "B", "pid": -1, "tid": -1, "ts": 0},
+  {"name": "Input", "cat": "prog", "ph": "E", "pid": -1, "tid": -1, "ts": 0.0004581},
+  {"name": "Sort", "cat": "prog", "ph": "B", "pid": -1, "tid": -1, "ts": 0.0020623},
+  {"name": "Sort", "cat": "prog", "ph": "E", "pid": -1, "tid": -1, "ts": 0.0022296},
+  {"name": "Reduce", "cat": "prog", "ph": "B", "pid": -1, "tid": -1, "ts": 0.0022322},
+  {"name": "Reduce", "cat": "prog", "ph": "E", "pid": -1, "tid": -1, "ts": 0.0023088},
+  {"name": "Sort", "cat": "prog", "ph": "B", "pid": -1, "tid": -1, "ts": 0.0023104},
+  {"name": "Sort", "cat": "prog", "ph": "E", "pid": -1, "tid": -1, "ts": 0.0023288},
+  {"name": "Print", "cat": "prog", "ph": "B", "pid": -1, "tid": -1, "ts": 0.0023302},
+  {"name": "Print", "cat": "prog", "ph": "E", "pid": -1, "tid": -1, "ts": 0.0623999}]
