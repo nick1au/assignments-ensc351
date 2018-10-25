@@ -64,17 +64,17 @@ int main() {
 	std::vector<string> v;
 	std::vector<pair<string, int>> reduced_vect;
 	
+	// Input File
     input_reader(v);
 
-
+	// Map Section
 	#pragma omp parallel
 		for (int i = 0; i < v.size(); i++){
 			#pragma omp single
-			collected_map.push_back(mapper(v.at(i)));
+			collected_map.push_back(mapper(v.at(i))); // Map Func
 		}
-	//cout << "PRINT COL" << endl;
-  	//print_vect(collected_map);
     
+	// Sort
     sort(collected_map.begin(), collected_map.end(), waytosort);
     
     unsigned int j = 0;
@@ -87,8 +87,8 @@ int main() {
 
 	//#pragma omp parallel //shared(i,j) //reduction(+:j)
 
-
-	if (collected_map.size() == 1){
+	// Reduce Section
+	if (collected_map.size() == 1){ // For size == 1
 		reduced_vect.push_back(reducer(make_vect(collected_map, 0, 1)));
 	}
 
@@ -99,18 +99,15 @@ int main() {
 		j = i + 1;
 		if(j < collected_map.size())
 		{
-		//	for (; j < collected_map.size() && (collected_map.at(i).first.compare(collected_map.at(j).first) == 0); j++)
-			
 			while(j < collected_map.size() && (collected_map.at(i).first.compare(collected_map.at(j).first) == 0))
 			{		
 				j++;
 			}
-	
+					// Reducer func
 					reduced_vect.push_back(reducer(make_vect(collected_map, i, j)));
 	
 		}
 		i = j;
-	//		#pragma omp single
 		
 		if(i == collected_map.size() - 1 && j == collected_map.size() - 1){
 				
@@ -120,8 +117,9 @@ int main() {
 			i--;
 		}
 	}
-	
+	// Sort
 	sort(reduced_vect.begin(),reduced_vect.end(),waytosortbyint);
+	// Print
     print_vect(reduced_vect);
 	end = system_clock::now();
 	duration<double> elapsed_seconds = end - start;
