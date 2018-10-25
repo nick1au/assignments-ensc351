@@ -1,3 +1,16 @@
+/*
+
+Authors: 
+Aung, Win - 301291027 - RAUNG
+Lau, Nicholas - 301290893 - NLA52
+
+Last edited: 2018-10-24 18:42
+
+Lab 4 - OpenMP
+
+To compile, type: make ./Lab4OMP
+
+*/
 #include <fstream>
 #include <iostream>
 #include <vector>
