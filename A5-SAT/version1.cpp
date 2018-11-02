@@ -94,7 +94,7 @@ void input_reader()
 	string str;
 	if(!inFile)
 	{
-		cerr << "Error";
+		cerr << "No input";
 		exit(1);
 	}
 	else
