@@ -50,8 +50,9 @@ public:
 	vector<int> get_stack(){
 		vector<int> solution;
 		for (int i = 1; i < stack.size(); i++){  // skip the placeholder at the front of the vector
-			solution.at(i) = stack.at(i)->value;
+			solution.push_back(stack.at(i)->value);
 		}
+		return solution;
 	}
 
 	void print_stack(){

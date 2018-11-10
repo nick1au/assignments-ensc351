@@ -33,9 +33,10 @@ int main() {
 	BinTree.add_node(1);
 	BinTree.add_node(-2);
 	BinTree.add_node(3);
+	//vector<int> thing = BinTree.get_stack();
 	//BinTree.print_stack();
 	compare_result(BinTree.get_stack());
-	//print_end_status();
+	print_end_status();
 
 return 0;
 	
@@ -96,6 +97,7 @@ void print_end_status(){
 }
 
 void compare_result(vector<int> solution){
+	
 	for (int i = 0; i < Expression.size(); i++){ // clause loop
 		cout << "i = " << i << endl;
 		int solved = 2;
@@ -103,13 +105,15 @@ void compare_result(vector<int> solution){
 			cout << "j = " << j << endl;
 			for (int k = 0; k < solution.size(); k++){ // proposed soln loop 
 				cout << "k = " << k << endl;
+				
 				if (Expression.at(i).clause.at(j) == solution.at(k)){ // proposed var soln checked good for clause
 					compResult.push_back(0);
 					Expression.at(i).state = 0;
 					break;
 				}
+				
 				else if (abs(Expression.at(i).clause.at(j)) == abs(solution.at(k))){ // proposed var soln does not work for clause check
-						solved = 1;
+					solved = 1;
 				}
 			}
 			if (solved == 0){ // break from clause var loop if soln is good
