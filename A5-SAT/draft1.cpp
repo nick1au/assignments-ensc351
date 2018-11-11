@@ -99,16 +99,18 @@ void print_end_status(){
 void compare_result(vector<int> solution){
 	
 	for (int i = 0; i < Expression.size(); i++){ // clause loop
-		cout << "i = " << i << endl;
+		//cout << "i = " << i << endl;
 		int solved = 2;
 		for (int j = 0; j < Expression.at(i).clause.size(); j++){ // clause var loop
-			cout << "j = " << j << endl;
+			//cout << "j = " << j << endl;
 			for (int k = 0; k < solution.size(); k++){ // proposed soln loop 
-				cout << "k = " << k << endl;
-				
+				//cout << "k = " << k << endl;
+				cout << endl << "Compare " << Expression.at(i).clause.at(j) << " with " << solution.at(k);
 				if (Expression.at(i).clause.at(j) == solution.at(k)){ // proposed var soln checked good for clause
 					compResult.push_back(0);
 					Expression.at(i).state = 0;
+					cout << " - OK";
+					solved = 0;
 					break;
 				}
 				
