@@ -1,10 +1,22 @@
-#CXX = g++
-#CXXFLAGS = -g -Wall -Wextra -Werror -Wfatal-errors -std=c++11
+## This is a simple Makefile with lots of comments
+## Check Unix Programming Tools handout for more info.
 
-#output: 
-#    Lab4 OMP.cpp -o output.o
+# Define what compiler to use and the flags.
+CC=cc
+CXX=CC
+CCFLAGS= -g -std=c99 -Wall -Werror -fopenmp
 
-#clean:
-#    rm -f *o output
+all: sat
 
-CPPFLAGS = -std=c++11 -fopenmp -Wall -Wextra -Werror -Wfatal-errors -Wno-sign-compare -Wnon-virtual-dtor -g
+# Compile all .c files into .o files
+# % matches all (like * in a command)
+# $< is the source file (.c file)
+%.o : %.c
+	$(CC) -c $(CCFLAGS) $<
+
+sat: stack.o sat.o
+	$(CC) -o sat stack.o sat.o $(CCFLAGS)
+
+clean:
+	rm -f core *.o sat
+
