@@ -132,7 +132,7 @@ bool same_or_not(int* given_clause, int* num, int current)
     return false;
 }
 
-// Go back down one element on the stack/ Backtrack
+// Backtrack Function
 bool goingback(struct Stack* solutionstack)
 {
     static bool goback = false;
@@ -162,6 +162,10 @@ bool goingback(struct Stack* solutionstack)
         pushstack(num,solutionstack);
         return true;
     }
+
+    
+
+    
     return true;
     
 }
